@@ -17,3 +17,4 @@
 - The input array may contain duplicates, so ascending order here means <=
 
 ### my Code is src/leetCode_581 in this repository
+![submission](assets/Submission_Detail.png)
