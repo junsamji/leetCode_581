@@ -1,14 +1,13 @@
 package leetCode_581;
 
-import java.util.SortedSet;
-import java.util.Stack;
+import java.util.Arrays;
 
 public class leetCode_581 {
 
 	public static void main(String[] args) {
 		// Testcase
-		//int[] value = {2,6,4,8,10,9,15};
-		int[] value = {2,1};
+		int[] value = {2,6,4,8,10,9,15};
+		//int[] value = {2,1};
 		
 		int[] result = findUnsortedSubarray(value);
 		
@@ -46,11 +45,17 @@ public class leetCode_581 {
 	private static int[] findUnsortedSubarray(int[] num) {
 		int[] arr = num.clone();
 		
-		selectSort(arr);
+		//My Method
+		//selectSort(arr);
+		Arrays.sort(arr);
 		
 		return arr;
 	}
 	
+	/**
+	 * 직접 만든 선택 정렬
+	 * @param arr
+	 */
 	private static void selectSort(int[] arr) {
 		for (int i=0; i<arr.length; i++) {
 			int minIdex = i;
