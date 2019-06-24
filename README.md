@@ -17,7 +17,7 @@
 
   `Link : https://leetcode.com/problems/peak-index-in-a-mountain-array/`
 
-![Submission_852](assets/Submission_Detail_852.png)
+![Question_852](assets/Question_852.png)
 
 ## my Code is src/leetCode_852 in this repository
 ![Submission_852](assets/Submission_Detail_852.png)
