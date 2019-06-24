@@ -3,7 +3,7 @@ package leetCode_852;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class leetCode_852 {
+public class leetCode_852_other {
 
 	public static void main(String[] args) {
 		int finalValue = 0;
@@ -19,25 +19,22 @@ public class leetCode_852 {
 	}
 	
 	private static int peakIndexInMountainArray(int[] A) {
-		int result = 0;
-		Integer[] B = new Integer[A.length];
+		int tmp = 0;
+		int max = 0;
 		
-		for (int i=0; i<A.length; i++) {
-			B[i] = A[i];
-		}
-		
-		Arrays.sort(B, Collections.reverseOrder());
-		
-		printArr(B, "변환값 [", "] ");
-		
-		for (int j=0; j<A.length; j++) {
-			if (A[j] == B[0]) {
-				result = j;
-				break;
+		for (int i=0; i<A.length-1; i++) {
+			if (A[i] > A[i+1]) {
+				tmp = i;
+			} else {
+				tmp = i+1;
+			}
+			
+			if (A[tmp] >= A[max]) {
+				max = tmp;
 			}
 		}
 		
-		return result;
+		return max;
 	}
 	
 	private static void printArr(int[] arr, String left, String right) {
